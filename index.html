@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Lumen</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside id="side">
+    <div class="brand"><span class="logo">✦</span>Lumen</div>
+    <button id="newChat" class="btn primary">＋ Chat baru</button>
+    <div id="hist"></div>
+    <button id="openSet" class="btn ghost">⚙ Pengaturan</button>
+  </aside>
+  <div id="scrim"></div>
+  <main>
+    <header>
+      <button id="menu" class="icon" aria-label="Menu">☰</button>
+      <span id="modelTag">Belum terhubung</span>
+      <button id="theme" class="icon" aria-label="Tema">◐</button>
+    </header>
+    <div id="chat">
+      <div id="welcome">
+        <div class="orb"></div>
+        <h1>Halo, ada yang bisa Lumen bantu?</h1>
+        <div class="chips">
+          <button>Jelaskan sesuatu dengan sederhana</button>
+          <button>Bantu tulis email profesional</button>
+          <button>Buatkan kode untuk saya</button>
+          <button>Analisis gambar yang saya kirim</button>
+        </div>
+      </div>
+      <div id="msgs"></div>
+    </div>
+    <footer>
+      <div id="prev"></div>
+      <div class="box">
+        <button id="attach" class="icon" aria-label="Foto">📎</button>
+        <textarea id="inp" rows="1" placeholder="Tanya apa saja, atau kirim foto…"></textarea>
+        <button id="send" class="icon send" aria-label="Kirim">↑</button>
+      </div>
+      <input type="file" id="file" accept="image/*" multiple hidden>
+    </footer>
+  </main>
+</div>
+
+<div id="modal"><div class="card">
+  <h2>Pengaturan</h2>
+  <label>Gemini API key
+    <input id="key" type="password" placeholder="AIza..." autocomplete="off">
+  </label>
+  <button id="conn" class="btn primary">Hubungkan &amp; cari model Flash</button>
+  <small id="status">Dapatkan key gratis di aistudio.google.com/apikey</small>
+  <label>Model <select id="model"></select></label>
+  <label>Kepribadian (system prompt) <textarea id="sys" rows="3"></textarea></label>
+  <label>Kreativitas: <b id="tv"></b> <input id="temp" type="range" min="0" max="1.5" step="0.1"></label>
+  <div class="row">
+    <button id="clear" class="btn ghost">Hapus semua chat</button>
+    <button id="close" class="btn primary">Simpan</button>
+  </div>
+</div></div>
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
